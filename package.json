@@ -33,6 +33,7 @@
     "@mui/lab": "^6.0.0-beta.20",
     "@mui/material": "^6.2.1",
     "@mui/system": "^6.2.1",
+    "@react-pdf/renderer": "^4.1.5",
     "mermaid": "^11.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
