@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
   page: {
     flexDirection: "column",
     backgroundColor: "#E4E4E4",
-    aspectRatio: PdfPageSize.ratio,
+    aspectRatio: PdfPageSize.aspectRatio,
   },
   section: {
     margin: 10,

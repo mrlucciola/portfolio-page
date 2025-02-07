@@ -6,7 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import Card from "@mui/material/Card";
 // components
 import MarkdownText from "../../util/MarkdownBlock";
-import ResumePdf from "../Resume/ResumePdf";
+import ResumePdfDisplay from "../Resume/ResumePdfDisplay";
 
 const description = `
 ## Senior Fullstack Engineer
@@ -44,7 +44,7 @@ const AboutCard: FC = () => (
       <CardContent>
         <MarkdownText>{description}</MarkdownText>
 
-        <ResumePdf />
+        <ResumePdfDisplay />
       </CardContent>
     </Card>
   </ListItem>

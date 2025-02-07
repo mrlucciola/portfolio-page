@@ -7,7 +7,7 @@ import LoadingButton from "@mui/lab/LoadingButton";
 import ResumePdfLayout from "./ResumePdfLayout";
 
 /** ###  */
-const ResumePdf: FC = () => {
+const ResumePdfDisplay: FC = () => {
   // @note `updateInstance` is the second prop in the returned array - unused because the info is static
   const [pdfInstance] = usePDF({ document: <ResumePdfLayout /> });
 
@@ -31,4 +31,4 @@ const ResumePdf: FC = () => {
   );
 };
 
-export default ResumePdf;
+export default ResumePdfDisplay;
