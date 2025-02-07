@@ -1,11 +1,13 @@
 import { type FC } from "react";
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
+import { PdfPageSize } from "./config";
 
 // Create styles
 const styles = StyleSheet.create({
   page: {
     flexDirection: "column",
     backgroundColor: "#E4E4E4",
+    aspectRatio: PdfPageSize.ratio,
   },
   section: {
     margin: 10,
@@ -14,12 +16,10 @@ const styles = StyleSheet.create({
   },
 });
 
-// ReactPDF.render(<MyDocument />, `${__dirname}/example.pdf`);
-
 /** ### Resume-PDF document layout component */
 const ResumePdfLayout: FC = () => (
   <Document pageMode="fullScreen" pageLayout="singlePage">
-    <Page size="A4" style={styles.page}>
+    <Page size={PdfPageSize.label} orientation="portrait" wrap={false} style={styles.page}>
       <View style={styles.section}>
         <Text>Section #1</Text>
       </View>

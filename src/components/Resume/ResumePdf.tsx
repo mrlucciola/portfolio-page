@@ -8,7 +8,8 @@ import ResumePdfLayout from "./ResumePdfLayout";
 
 /** ###  */
 const ResumePdf: FC = () => {
-  const [pdfInstance, _updateInstance] = usePDF({ document: <ResumePdfLayout /> });
+  // @note `updateInstance` is the second prop in the returned array - unused because the info is static
+  const [pdfInstance] = usePDF({ document: <ResumePdfLayout /> });
 
   return (
     <Grid container direction="column">
