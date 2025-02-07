@@ -8,13 +8,15 @@ import ResumePdfLayout from "./ResumePdfLayout";
 
 /** ###  */
 const ResumePdfDisplay: FC = () => {
+  const pdfComponent = <ResumePdfLayout />;
+
   // @note `updateInstance` is the second prop in the returned array - unused because the info is static
-  const [pdfInstance] = usePDF({ document: <ResumePdfLayout /> });
+  const [pdfInstance] = usePDF({ document: pdfComponent });
 
   return (
     <Grid container direction="column">
       <PDFViewer width="100%" showToolbar={false}>
-        <ResumePdfLayout />
+        {pdfComponent}
       </PDFViewer>
 
       <LoadingButton

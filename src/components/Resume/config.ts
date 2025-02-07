@@ -1,5 +1,6 @@
-import type { CSSProperties } from "react";
-import type { PageSize } from "@react-pdf/types";
+import { type CSSProperties } from "react";
+import { StyleSheet } from "@react-pdf/renderer";
+import { type PageSize } from "@react-pdf/types";
 
 // 1020.0/1320 = 0.7727272727
 //    8.5/11   = 0.7727272727
@@ -9,5 +10,14 @@ export const PdfPageSize = Object.freeze({
   height: 11,
   get aspectRatio(): CSSProperties["aspectRatio"] {
     return this.width / this.height;
+  },
+});
+
+export const pdfDefaultStyles = StyleSheet.create({
+  section: {
+    flexDirection: "column",
+
+    rowGap: 4,
+    margin: 1,
   },
 });

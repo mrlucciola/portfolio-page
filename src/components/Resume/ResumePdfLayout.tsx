@@ -1,6 +1,8 @@
 import { type FC } from "react";
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
+// utils
 import { PdfPageSize } from "./config";
+import HeaderSection from "./HeaderSection";
 
 // Create styles
 const styles = StyleSheet.create({
@@ -19,10 +21,10 @@ const styles = StyleSheet.create({
 /** ### Resume-PDF document layout component */
 const ResumePdfLayout: FC = () => (
   <Document pageMode="fullScreen" pageLayout="singlePage">
-    <Page size={PdfPageSize.label} orientation="portrait" wrap={false} style={styles.page}>
-      <View style={styles.section}>
-        <Text>Section #1</Text>
-      </View>
+    <Page size={PdfPageSize.label} orientation="portrait" style={styles.page}>
+      {/* Sections */}
+      <HeaderSection />
+
       <View style={styles.section}>
         <Text>Section #2</Text>
       </View>
