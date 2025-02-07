@@ -5,10 +5,10 @@ import Grid from "@mui/material/Grid2";
 import ListItem from "@mui/material/ListItem";
 import CardContent from "@mui/material/CardContent";
 import Card from "@mui/material/Card";
+import LoadingButton from "@mui/lab/LoadingButton";
 // components
 import MarkdownText from "../../util/MarkdownBlock";
 import ResumePdfLayout from "../Resume/ResumePdfLayout";
-import { LoadingButton } from "@mui/lab";
 
 const description = `
 ## Senior Fullstack Engineer
