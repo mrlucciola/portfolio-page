@@ -1,9 +1,11 @@
 import { type FC } from "react";
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
-// utils
-import { PdfPageSize } from "./config";
+// layout components
 import HeaderSection from "./HeaderSection";
 import SummarySection from "./SummarySection";
+import BackgroundSection from "./BackgroundSection";
+// utils
+import { PdfPageSize } from "./config";
 
 // Create styles
 const styles = StyleSheet.create({
@@ -11,7 +13,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     backgroundColor: "#E4E4E4",
     aspectRatio: PdfPageSize.aspectRatio,
-    paddingHorizontal:'5%'
+    paddingHorizontal: "5%",
   },
   section: {
     margin: 10,
@@ -28,6 +30,8 @@ const ResumePdfLayout: FC = () => (
       <HeaderSection />
 
       <SummarySection />
+
+      <BackgroundSection />
 
       <View style={styles.section}>
         <Text>Section #2</Text>
