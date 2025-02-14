@@ -23,7 +23,12 @@ const CategoryItem: FC<{ item: SkillOrTool["items"][number] }> = ({ item }) => (
  * 2. List of items within the category
  */
 const SkillCategory: FC<SkillOrTool> = ({ title, items }) => {
-  const categoryItemElems = items.map((item) => <CategoryItem item={item} />);
+  const categoryItemElems = items.map((item, idx) => (
+    <div key={item}>
+      <CategoryItem item={item} />
+      {idx + 1 < items.length && <Text style={styles.item}>,</Text>}
+    </div>
+  ));
 
   return (
     <View style={styles.category}>

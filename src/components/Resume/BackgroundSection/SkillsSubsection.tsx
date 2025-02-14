@@ -4,7 +4,7 @@ import { StyleSheet, View } from "@react-pdf/renderer";
 import SkillCategory from "./SkillCategory";
 // config
 import { pdfDefaultStyles } from "../config";
-import { skillsArr } from "./data";
+import { skillsArr } from "./skillsData";
 
 const styles = StyleSheet.create({
   section: {
