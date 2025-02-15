@@ -6,6 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import Card from "@mui/material/Card";
 // components
 import MarkdownText from "../../util/MarkdownBlock";
+import ResumePdfDisplay from "../Resume/ResumePdfDisplay";
 
 const description = `
 ## Senior Fullstack Engineer
@@ -16,7 +17,6 @@ const description = `
 - Distributed systems
 - DevOps
 - System architecture
-
 
 ### Tools & Technologies
 - Main languages: TypeScript, Rust
@@ -30,7 +30,8 @@ const description = `
 /** ###  */
 const AboutCard: FC = () => (
   <ListItem
-    direction="column"
+    // direction="column"
+    // container
     component={Grid}
     disableGutters
     disablePadding
@@ -42,6 +43,8 @@ const AboutCard: FC = () => (
     <Card sx={{ borderRadius: 0, flex: 1 }}>
       <CardContent>
         <MarkdownText>{description}</MarkdownText>
+
+        <ResumePdfDisplay />
       </CardContent>
     </Card>
   </ListItem>
